@@ -1,11 +1,78 @@
-  =>  Template Name    : Iqbal & Febri - Free Wedding Website Template
+# 📜 README – Undangan Pernikahan Digital
 
-  =>  Template Link    : https://htmlcodex.com/free-wedding-website-template
+## 📌 Deskripsi
+Proyek ini adalah **undangan pernikahan digital** berbasis web, yang bisa menampilkan nama tamu undangan secara personal melalui parameter URL. Dibangun dengan **HTML, CSS, JavaScript**, dan memanfaatkan **Firebase** untuk fitur RSVP, komentar, dan statistik tamu.
 
-  =>  Template License : https://htmlcodex.com/license (or read the LICENSE.txt file)
+---
 
-  =>  Template Author  : HTML Codex
+## 🚀 Cara Menampilkan Nama Tamu di Undangan
 
-  =>  Author Website   : https://htmlcodex.com
+Nama tamu diambil dari **parameter URL** `to`.
 
-  =>  About HTML Codex : HTML Codex is one of the top creators and publishers of Free HTML templates, HTML landing pages, HTML email templates and HTML snippets in the world. Read more at ( https://htmlcodex.com/about-us )
+**Format umum:**
+```
+https://<link-undangan>/?to=Nama%20Tamu
+```
+
+### Contoh:
+- **Budi**
+```
+https://roaring-cannoli-0c250b.netlify.app/?to=Budi
+```
+- **Siti Nurhaliza**
+```
+https://roaring-cannoli-0c250b.netlify.app/?to=Siti%20Nurhaliza
+```
+
+> **Tips:** Gunakan `%20` untuk mengganti spasi di nama.
+
+---
+
+## 🎵 Fitur
+1. **Nama Tamu Otomatis**  
+   Nama akan muncul di elemen `.guest-name-text` sesuai parameter `to` di URL.
+   
+2. **Tombol “Buka Undangan”**  
+   - Saat diklik, akan pindah ke `undangan.html` dengan parameter `to` dan `playmusic=1` untuk memutar musik otomatis.
+   
+3. **Musik Latar Otomatis**  
+   - Aktif bila ada `playmusic=1` di URL.
+
+4. **RSVP dengan Login Google**  
+   - Tamu bisa mengisi RSVP setelah login dengan akun Google.
+
+5. **Komentar & Statistik**  
+   - Menampilkan komentar dari tamu dan jumlah yang hadir.
+
+6. **Countdown Menuju Hari Pernikahan**  
+   - Hitungan mundur otomatis berdasarkan tanggal di `main.js`.
+
+7. **Video Intro + Loop**  
+   - Video pembuka yang berganti ke video loop setelah selesai.
+
+---
+
+## 📂 Struktur File
+```
+📁 root
+│-- index.html       → Halaman pembuka undangan
+│-- undangan.html    → Halaman detail acara
+│-- main.js          → Script utama (Firebase, RSVP, musik, countdown, dll.)
+│-- css/style.css    → Tampilan undangan
+│-- img/             → Folder gambar
+│-- lib/             → Library tambahan (OwlCarousel, Lightbox, dsb.)
+```
+
+---
+
+## 🛠 Cara Edit Teks & Fitur
+- **Nama pasangan & detail acara:** Edit langsung di `index.html` dan `undangan.html`.
+- **Tanggal acara:** Ubah di `main.js` bagian `const weddingDate = new Date("2025-08-19T00:00:00")`.
+- **Konfigurasi Firebase:** Ubah di `main.js` bagian `firebaseConfig`.
+
+---
+
+## 📌 Cara Membagikan ke Tamu
+1. Ganti `Nama%20Tamu` di URL sesuai nama masing-masing tamu.
+2. Kirim link personal tersebut lewat WhatsApp, email, atau media lain.
+3. Tamu akan melihat namanya tercetak di halaman pembuka.
