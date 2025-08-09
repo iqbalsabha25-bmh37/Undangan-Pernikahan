@@ -9914,3 +9914,15 @@ body {
 .footer-contact a:hover {
   text-decoration: underline;
 }
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-container iframe {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 10px;
+}
