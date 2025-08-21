@@ -167,7 +167,7 @@ async function updateFooterStats() {
 
 // === Countdown ===
 function updateCountdownAll() {
-  const weddingDate = new Date("2025-08-19T00:00:00").getTime();
+  const weddingDate = new Date("2025-08-25T00:00:00").getTime();
   const now = new Date().getTime();
   const distance = weddingDate - now;
 
@@ -349,3 +349,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
